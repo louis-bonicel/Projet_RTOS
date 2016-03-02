@@ -38,11 +38,20 @@ typedef struct{
 static const uint8_t NUMBER_OF_SENSORS = 12;
 /// TODO
 static const uint8_t ACTUATOR_TAPIS_SORTIE = 5;
-static const uint8_t ACTUATOR_TAPIS_ENTREE = 5;
+static const uint8_t ACTUATOR_TAPIS_ENTREE = 0;
+static const uint8_t ACTUATOR_ROBOT_X_NEG = 2;
+static const uint8_t ACTUATOR_ROBOT_X_POS = 3;
+static const uint8_t ACTUATOR_ROBOT_Y_NEG = 4;
+static const uint8_t ACTUATOR_ROBOT_Y_POS = 5;
+static const uint8_t ACTUATOR_ROBOT_PRENDRE = 6;
+static const uint8_t ACTUATOR_ROBOT_DESCENDRE = 7;
 static const uint8_t SENSOR_PALETTE = 5;
 static const uint8_t SENSOR_TYPE_S0 = 0;
 static const uint8_t SENSOR_TYPE_S1 = 1;
 static const uint8_t SENSOR_BOUT_TAPIS_ENTREE = 2;
+static const uint8_t SENSOR_DEPLACEMENT_ROBOT = 3;
+static const uint8_t SENSOR_ROBOT_BAS = 6;
+static const uint8_t SENSOR_ROBOT_PIECE_PRISE = 7;
 
 // Queues
 xQueueHandle q_newSubscriptions;
@@ -53,6 +62,7 @@ xQueueHandle q_caissePleine;
 xQueueHandle q_sensorsTapisEntree;
 xQueueHandle q_pieceDispo;
 xQueueHandle q_piecePrise;
+xQueueHandle q_sensorsRobot;
 
 // Semaphores
 xSemaphoreHandle sem_I2C_BUS;

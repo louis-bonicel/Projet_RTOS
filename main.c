@@ -112,6 +112,10 @@ int main( void )
    if ( q_piecePrise == NULL )
      return 1;
 
+   q_sensorsRobot = xQueueCreate( 1 , sizeof( sensor_t ) );
+   if ( q_sensorsRobot == NULL )
+     return 1;
+
     sem_I2C_BUS = xSemaphoreCreateMutex();
     if ( sem_I2C_BUS == NULL )
       return 1;
@@ -121,6 +125,7 @@ int main( void )
     xTaskCreate( vTaskEcritureActionneur , "Task_Actionneurs" , 128 , NULL , TASK_ACTUATORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
     xTaskCreate( vTaskTapisSortie , "Task_TapisSortie" , 128 , NULL , TASK_TAPIS_SORTIE_PRIORITY , NULL );        // 128 bytes stack, priority 1
     xTaskCreate( vTaskTapisEntree , "Task_TapisEntree" , 128 , NULL , TASK_TAPIS_ENTREE_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    xTaskCreate( vTaskRobot , "Task_Robot" , 128 , NULL , TASK_ROBOT_PRIORITY , NULL );        // 128 bytes stack, priority 1
 
 
     user_event_channel = xTraceOpenLabel("UEV");
