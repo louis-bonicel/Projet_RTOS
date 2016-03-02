@@ -1,170 +1,182 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc 4.8.2 i686-w64-mingw32 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F429ZI -DSTM32F429xx -DUSE_STDPERIPH_DRIVER -D__FPU_USED -I..\..\..\workspace\ITSPLC_FreeRTOS\stdperiph_lib\inc -I..\..\..\workspace\ITSPLC_FreeRTOS\BSP\inc -I..\..\..\workspace\ITSPLC_FreeRTOS\BSP -I..\..\..\workspace\ITSPLC_FreeRTOS\freertos\include -I..\..\..\workspace\ITSPLC_FreeRTOS\freertos\portable\GCC -I..\..\..\workspace\ITSPLC_FreeRTOS\cmsis -I..\..\..\workspace\ITSPLC_FreeRTOS\FreeRTOS-Plus-Trace\Include -I..\..\..\workspace\ITSPLC_FreeRTOS\freertos\portable -I..\..\..\workspace\ITSPLC_FreeRTOS\FreeRTOS-Plus-Trace -I..\..\..\workspace\ITSPLC_FreeRTOS\stdperiph_lib -I..\..\..\workspace\ITSPLC_FreeRTOS\cmsis_boot -I..\..\..\workspace\ITSPLC_FreeRTOS\freertos -I..\..\..\workspace -I..\..\..\workspace\ITSPLC_FreeRTOS\freertos\portable\GCC\ARM_CM4F -I..\..\.. -I..\..\..\workspace\ITSPLC_FreeRTOS">
-      <target file="stm32f4xx_cryp_aes.o" lastModified="152d58f7467">
+   <processor signature="arm-none-eabi-gcc 4.8.2 i686-w64-mingw32 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F429ZI -DSTM32F429xx -DUSE_STDPERIPH_DRIVER -D__FPU_USED -I..\..\..\workspace\Projet_RTOS\freertos\portable -I..\..\..\workspace\Projet_RTOS\FreeRTOS-Plus-Trace\Include -I..\..\..\workspace\Projet_RTOS\FreeRTOS-Plus-Trace -I..\..\..\workspace\Projet_RTOS\freertos\portable\GCC -I..\..\..\workspace\Projet_RTOS\stdperiph_lib\inc -I..\..\..\workspace\Projet_RTOS\freertos -I..\..\..\workspace\Projet_RTOS\cmsis_boot -I..\..\..\workspace\Projet_RTOS\freertos\include -I..\..\..\workspace\Projet_RTOS\BSP -I..\..\..\workspace\Projet_RTOS\freertos\portable\GCC\ARM_CM4F -I..\..\..\workspace -I..\..\..\workspace\Projet_RTOS\Tasks -I..\..\..\workspace\Projet_RTOS\BSP\inc -I..\..\.. -I..\..\..\workspace\Projet_RTOS -I..\..\..\workspace\Projet_RTOS\cmsis -I..\..\..\workspace\Projet_RTOS\stdperiph_lib">
+      <target file="stm32f4xx_cryp_aes.o" lastModified="1533376cbc7">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_cryp_aes.c" lastModified="152d58801c9"/>
       </target>
-      <target file="trcUser.o" lastModified="152d58f836d">
+      <target file="trcUser.o" lastModified="1533376dc8d">
          <source file="..\..\..\FreeRTOS-Plus-Trace\trcUser.c" lastModified="152d587f6df"/>
       </target>
-      <target file="misc.o" lastModified="152d58f88f1">
+      <target file="misc.o" lastModified="1533376e2e4">
          <source file="..\..\..\stdperiph_lib\src\misc.c" lastModified="152d587ffe5"/>
       </target>
-      <target file="stm32f4xx_ltdc.o" lastModified="152d58f79dd">
+      <target file="TD_ecriture.o" lastModified="1533376d6ad">
+         <source file="..\..\..\Tasks\TD_ecriture.c" lastModified="1533331cc71"/>
+      </target>
+      <target file="stm32f4xx_ltdc.o" lastModified="1533376d15c">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_ltdc.c" lastModified="152d587ff85"/>
       </target>
-      <target file="trcKernel.o" lastModified="152d58f72a1">
+      <target file="trcKernel.o" lastModified="1533376c9c0">
          <source file="..\..\..\FreeRTOS-Plus-Trace\trcKernel.c" lastModified="152d587f6f0"/>
       </target>
-      <target file="stm32f429i_discovery.o" lastModified="152d58f8a75">
+      <target file="stm32f429i_discovery.o" lastModified="1533376e477">
          <source file="..\..\..\BSP\src\stm32f429i_discovery.c" lastModified="152d587e3f0"/>
       </target>
-      <target file="stm32f4xx_cryp.o" lastModified="152d58f7fe4">
+      <target file="stm32f4xx_cryp.o" lastModified="1533376d8bc">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_cryp.c" lastModified="152d5880268"/>
       </target>
-      <target file="queue.o" lastModified="152d58f8525">
+      <target file="queue.o" lastModified="1533376de5e">
          <source file="..\..\..\freertos\queue.c" lastModified="152d587f253"/>
       </target>
-      <target file="stm32f4xx_cryp_des.o" lastModified="152d58f7f74">
+      <target file="stm32f4xx_cryp_des.o" lastModified="1533376d846">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_cryp_des.c" lastModified="152d5880227"/>
       </target>
-      <target file="stm32f4xx_tim.o" lastModified="152d58f8c83">
+      <target file="stm32f4xx_tim.o" lastModified="1533376e6ab">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_tim.c" lastModified="152d588013a"/>
       </target>
-      <target file="timers.o" lastModified="152d58f7ccb">
+      <target file="timers.o" lastModified="1533376d469">
          <source file="..\..\..\freertos\timers.c" lastModified="152d587f244"/>
       </target>
-      <target file="stm32f4xx_exti.o" lastModified="152d58f8831">
+      <target file="stm32f4xx_exti.o" lastModified="1533376e215">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_exti.c" lastModified="152d5880203"/>
       </target>
-      <target file="stm32f4xx_iwdg.o" lastModified="152d58f7a97">
+      <target file="stm32f4xx_iwdg.o" lastModified="1533376d214">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_iwdg.c" lastModified="152d587fff5"/>
       </target>
-      <target file="tasks.o" lastModified="152d58f7f18">
+      <target file="tasks.o" lastModified="1533376d7dd">
          <source file="..\..\..\freertos\tasks.c" lastModified="152d587f230"/>
       </target>
-      <target file="stm32f4xx_gpio.o" lastModified="152d58f804b">
+      <target file="stm32f4xx_gpio.o" lastModified="1533376d92c">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_gpio.c" lastModified="152d58801aa"/>
       </target>
-      <target file="trcBase.o" lastModified="152d58f7ba8">
+      <target file="TD_acquisition.o" lastModified="1533376cd2a">
+         <source file="..\..\..\Tasks\TD_acquisition.c" lastModified="1533376459f"/>
+      </target>
+      <target file="trcBase.o" lastModified="1533376d33f">
          <source file="..\..\..\FreeRTOS-Plus-Trace\trcBase.c" lastModified="152d587f6c5"/>
       </target>
-      <target file="trcHardwarePort.o" lastModified="152d58f8897">
+      <target file="trcHardwarePort.o" lastModified="1533376e284">
          <source file="..\..\..\FreeRTOS-Plus-Trace\trcHardwarePort.c" lastModified="152d587f761"/>
       </target>
-      <target file="stm32f4xx_usart.o" lastModified="152d58f7622">
+      <target file="stm32f4xx_usart.o" lastModified="1533376ce18">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_usart.c" lastModified="152d58801d9"/>
       </target>
-      <target file="stm32f4xx_rtc.o" lastModified="152d58f8a11">
+      <target file="stm32f4xx_rtc.o" lastModified="1533376e40d">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_rtc.c" lastModified="152d58801f1"/>
       </target>
-      <target file="event_groups.o" lastModified="152d58f86fe">
+      <target file="event_groups.o" lastModified="1533376e0cb">
          <source file="..\..\..\freertos\event_groups.c" lastModified="152d587f21d"/>
       </target>
-      <target file="stm32f4xx_hash_sha1.o" lastModified="152d58f759b">
+      <target file="stm32f4xx_hash_sha1.o" lastModified="1533376cd8f">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_hash_sha1.c" lastModified="152d5880278"/>
       </target>
-      <target file="stm32f4xx_rcc.o" lastModified="152d58f7c3d">
+      <target file="stm32f4xx_rcc.o" lastModified="1533376d3d3">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_rcc.c" lastModified="152d5880216"/>
       </target>
-      <target file="stm32f429i_discovery_ioe.o" lastModified="152d58f7333">
+      <target file="stm32f429i_discovery_ioe.o" lastModified="1533376ca5b">
          <source file="..\..\..\BSP\src\stm32f429i_discovery_ioe.c" lastModified="152d587e406"/>
       </target>
-      <target file="stm32f4xx_dac.o" lastModified="152d58f7950">
+      <target file="stm32f4xx_dac.o" lastModified="1533376d05c">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dac.c" lastModified="152d58802b8"/>
       </target>
-      <target file="stm32f4xx_can.o" lastModified="152d58f77bf">
+      <target file="stm32f4xx_can.o" lastModified="1533376cf2d">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_can.c" lastModified="152d5880101"/>
       </target>
-      <target file="stm32f4xx_pwr.o" lastModified="152d58f7696">
+      <target file="stm32f4xx_pwr.o" lastModified="1533376ce8b">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_pwr.c" lastModified="152d587ffd4"/>
       </target>
-      <target file="croutine.o" lastModified="152d58f85f2">
+      <target file="croutine.o" lastModified="1533376dfb0">
          <source file="..\..\..\freertos\croutine.c" lastModified="152d587f261"/>
       </target>
-      <target file="stm32f429i_discovery_sdram.o" lastModified="152d58f80ad">
+      <target file="stm32f429i_discovery_sdram.o" lastModified="1533376d996">
          <source file="..\..\..\BSP\src\stm32f429i_discovery_sdram.c" lastModified="152d587e3d3"/>
       </target>
-      <target file="stm32f4xx_wwdg.o" lastModified="152d58f7818">
+      <target file="stm32f4xx_wwdg.o" lastModified="1533376cf8a">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_wwdg.c" lastModified="152d5880016"/>
       </target>
-      <target file="stm32f4xx_rng.o" lastModified="152d58f87d7">
+      <target file="stm32f4xx_rng.o" lastModified="1533376e1b5">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_rng.c" lastModified="152d5880039"/>
       </target>
-      <target file="stm32f4xx_adc.o" lastModified="152d58f7d53">
+      <target file="stm32f4xx_adc.o" lastModified="1533376d4f9">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_adc.c" lastModified="152d587ffc4"/>
       </target>
-      <target file="list.o" lastModified="152d58f8198">
+      <target file="list.o" lastModified="1533376da94">
          <source file="..\..\..\freertos\list.c" lastModified="152d587f2a4"/>
       </target>
-      <target file="stm32f4xx_flash.o" lastModified="152d58f8132">
+      <target file="stm32f4xx_flash.o" lastModified="1533376da23">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_flash.c" lastModified="152d58801b9"/>
       </target>
-      <target file="port.o" lastModified="152d58f8467">
+      <target file="port.o" lastModified="1533376dd96">
          <source file="..\..\..\freertos\portable\GCC\ARM_CM4F\port.c" lastModified="152d587f4a8"/>
       </target>
-      <target file="startup_stm32f429_439xx.o" lastModified="152d58f85ff">
+      <target file="startup_stm32f429_439xx.o" lastModified="1533376dfbe">
          <source file="..\..\..\cmsis_boot\startup\startup_stm32f429_439xx.s" lastModified="152d587f1fa"/>
       </target>
-      <target file="stm32f4xx_cryp_tdes.o" lastModified="152d58f8bac">
+      <target file="stm32f4xx_cryp_tdes.o" lastModified="1533376e5bf">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_cryp_tdes.c" lastModified="152d5880006"/>
       </target>
-      <target file="stm32f4xx_dcmi.o" lastModified="152d58f7e16">
-         <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dcmi.c" lastModified="152d5880050"/>
-      </target>
-      <target file="stm32f4xx_dma.o" lastModified="152d58f82cb">
+      <target file="stm32f4xx_dma.o" lastModified="1533376dbe4">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dma.c" lastModified="152d5880236"/>
       </target>
-      <target file="stm32f4xx_sai.o" lastModified="152d58f8205">
+      <target file="stm32f4xx_dcmi.o" lastModified="1533376d5d3">
+         <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dcmi.c" lastModified="152d5880050"/>
+      </target>
+      <target file="stm32f4xx_sai.o" lastModified="1533376db0c">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_sai.c" lastModified="152d5880028"/>
       </target>
-      <target file="stm32f4xx_crc.o" lastModified="152d58f7a40">
+      <target file="stm32f4xx_crc.o" lastModified="1533376d1b8">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_crc.c" lastModified="152d587ff68"/>
       </target>
-      <target file="printf.o" lastModified="152d58f7db3">
+      <target file="printf.o" lastModified="1533376d564">
          <source file="..\..\..\stdio\printf.c" lastModified="152d587ff58"/>
       </target>
-      <target file="stm32f4xx_sdio.o" lastModified="152d58f73a9">
+      <target file="stm32f4xx_sdio.o" lastModified="1533376cb03">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_sdio.c" lastModified="152d5880149"/>
       </target>
-      <target file="trcKernelPort.o" lastModified="152d58f8594">
+      <target file="trcKernelPort.o" lastModified="1533376ded8">
          <source file="..\..\..\FreeRTOS-Plus-Trace\trcKernelPort.c" lastModified="152d587f792"/>
       </target>
-      <target file="stm32f4xx_hash_md5.o" lastModified="152d58f78d6">
+      <target file="TD_tapisEntree.o" lastModified="1533376d0d1">
+         <source file="..\..\..\Tasks\TD_tapisEntree.c" lastModified="15333737d34"/>
+      </target>
+      <target file="stm32f4xx_hash_md5.o" lastModified="1533376cfed">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_hash_md5.c" lastModified="152d5880294"/>
       </target>
-      <target file="stm32f4xx_dbgmcu.o" lastModified="152d58f8cd7">
+      <target file="stm32f4xx_dbgmcu.o" lastModified="1533376e706">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dbgmcu.c" lastModified="152d5880119"/>
       </target>
-      <target file="stm32f4xx_i2c.o" lastModified="152d58f8780">
+      <target file="stm32f4xx_i2c.o" lastModified="1533376e155">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_i2c.c" lastModified="152d58802a5"/>
       </target>
-      <target file="stm32f4xx_syscfg.o" lastModified="152d58f7212">
+      <target file="stm32f4xx_syscfg.o" lastModified="1533376c924">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_syscfg.c" lastModified="152d588012a"/>
       </target>
-      <target file="stm32f4xx_hash.o" lastModified="152d58f74cf">
+      <target file="stm32f4xx_hash.o" lastModified="1533376cc37">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_hash.c" lastModified="152d58802cb"/>
       </target>
-      <target file="stm32f429i_discovery_lcd.o" lastModified="152d58f8b4d">
+      <target file="stm32f429i_discovery_lcd.o" lastModified="1533376e55b">
          <source file="..\..\..\BSP\src\stm32f429i_discovery_lcd.c" lastModified="152d587e369"/>
       </target>
-      <target file="stm32f4xx_spi.o" lastModified="152d58f8679">
+      <target file="stm32f4xx_spi.o" lastModified="1533376e03f">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_spi.c" lastModified="152d5880256"/>
       </target>
-      <target file="stm32f4xx_fmc.o" lastModified="152d58f83fa">
+      <target file="stm32f4xx_fmc.o" lastModified="1533376dd21">
          <source file="..\..\..\stdperiph_lib\src\stm32f4xx_fmc.c" lastModified="152d5880246"/>
       </target>
-      <target file="main.o" lastModified="152d58f7b02">
-         <source file="..\..\..\main.c" lastModified="152d58e5f37"/>
+      <target file="main.o" lastModified="1533376d28d">
+         <source file="..\..\..\main.c" lastModified="1533376c446"/>
       </target>
-      <target file="stm32f4xx_dma2d.o" lastModified="152d58f7540">
-         <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dma2d.c" lastModified="152d587ff77"/>
-      </target>
-      <target file="system_stm32f4xx.o" lastModified="152d58f825c">
+      <target file="system_stm32f4xx.o" lastModified="1533376db69">
          <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="152d587f121"/>
       </target>
-      <target file="heap_1.o" lastModified="152d58f895b">
+      <target file="stm32f4xx_dma2d.o" lastModified="1533376ccb2">
+         <source file="..\..\..\stdperiph_lib\src\stm32f4xx_dma2d.c" lastModified="152d587ff77"/>
+      </target>
+      <target file="heap_1.o" lastModified="1533376e354">
          <source file="..\..\..\freertos\portable\MemMang\heap_1.c" lastModified="152d587f440"/>
+      </target>
+      <target file="TD_tapisSortie.o" lastModified="1533376df4a">
+         <source file="..\..\..\Tasks\TD_tapisSortie.c" lastModified="1533358c5c9"/>
       </target>
    </processor>
 </history>
