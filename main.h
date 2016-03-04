@@ -37,21 +37,23 @@ typedef struct{
 
 static const uint8_t NUMBER_OF_SENSORS = 12;
 /// TODO
-static const uint8_t ACTUATOR_TAPIS_SORTIE = 5;
 static const uint8_t ACTUATOR_TAPIS_ENTREE = 0;
-static const uint8_t ACTUATOR_ROBOT_X_NEG = 2;
-static const uint8_t ACTUATOR_ROBOT_X_POS = 3;
+static const uint8_t ACTUATOR_TAPIS_SORTIE = 1;
+static const uint8_t ACTUATOR_ROBOT_X_POS = 2;
+static const uint8_t ACTUATOR_ROBOT_X_NEG = 3;
 static const uint8_t ACTUATOR_ROBOT_Y_NEG = 4;
 static const uint8_t ACTUATOR_ROBOT_Y_POS = 5;
-static const uint8_t ACTUATOR_ROBOT_PRENDRE = 6;
-static const uint8_t ACTUATOR_ROBOT_DESCENDRE = 7;
-static const uint8_t SENSOR_PALETTE = 5;
+static const uint8_t ACTUATOR_ROBOT_DESCENDRE = 6;
+static const uint8_t ACTUATOR_ROBOT_PRENDRE = 7;
 static const uint8_t SENSOR_TYPE_S0 = 0;
 static const uint8_t SENSOR_TYPE_S1 = 1;
 static const uint8_t SENSOR_BOUT_TAPIS_ENTREE = 2;
-static const uint8_t SENSOR_DEPLACEMENT_ROBOT = 3;
-static const uint8_t SENSOR_ROBOT_BAS = 6;
-static const uint8_t SENSOR_ROBOT_PIECE_PRISE = 7;
+static const uint8_t SENSOR_PALETTE = 3;
+static const uint8_t SENSOR_ROBOT_Y0 = 4;
+static const uint8_t SENSOR_DEPLACEMENT_ROBOT = 5;
+static const uint8_t SENSOR_ROBOT_HAUT = 6;
+static const uint8_t SENSOR_ROBOT_BAS = 7;
+static const uint8_t SENSOR_ROBOT_PIECE_PRISE = 8;
 
 // Queues
 xQueueHandle q_newSubscriptions;

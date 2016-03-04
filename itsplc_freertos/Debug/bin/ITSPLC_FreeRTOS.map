@@ -290,7 +290,7 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\TD_acquisition.o
  .data          0x00000000        0x0 ..\obj\TD_acquisition.o
  .bss           0x00000000        0x0 ..\obj\TD_acquisition.o
- .rodata        0x00000000       0x1c ..\obj\TD_acquisition.o
+ .rodata        0x00000000       0x1e ..\obj\TD_acquisition.o
  .text          0x00000000        0x0 ..\obj\stm32f4xx_hash_sha1.o
  .data          0x00000000        0x0 ..\obj\stm32f4xx_hash_sha1.o
  .bss           0x00000000        0x0 ..\obj\stm32f4xx_hash_sha1.o
@@ -589,7 +589,7 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\TD_tapisEntree.o
  .data          0x00000000        0x0 ..\obj\TD_tapisEntree.o
  .bss           0x00000000        0x0 ..\obj\TD_tapisEntree.o
- .rodata        0x00000000       0x1c ..\obj\TD_tapisEntree.o
+ .rodata        0x00000000       0x1e ..\obj\TD_tapisEntree.o
  .text          0x00000000        0x0 ..\obj\stm32f4xx_ltdc.o
  .data          0x00000000        0x0 ..\obj\stm32f4xx_ltdc.o
  .bss           0x00000000        0x0 ..\obj\stm32f4xx_ltdc.o
@@ -1008,7 +1008,7 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\TD_ecriture.o
  .data          0x00000000        0x0 ..\obj\TD_ecriture.o
  .bss           0x00000000        0x0 ..\obj\TD_ecriture.o
- .rodata        0x00000000       0x1c ..\obj\TD_ecriture.o
+ .rodata        0x00000000       0x1e ..\obj\TD_ecriture.o
  .text          0x00000000        0x0 ..\obj\tasks.o
  .data          0x00000000        0x0 ..\obj\tasks.o
  .text.vTaskDelete
@@ -1558,7 +1558,7 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\TD_tapisSortie.o
  .data          0x00000000        0x0 ..\obj\TD_tapisSortie.o
  .bss           0x00000000        0x0 ..\obj\TD_tapisSortie.o
- .rodata        0x00000000       0x1c ..\obj\TD_tapisSortie.o
+ .rodata        0x00000000       0x1e ..\obj\TD_tapisSortie.o
  .text          0x00000000        0x0 ..\obj\croutine.o
  .data          0x00000000        0x0 ..\obj\croutine.o
  .bss           0x00000000        0x0 ..\obj\croutine.o
@@ -2313,7 +2313,7 @@ Linker script and memory map
 
                 0x20030000                _eram = 0x20030000
 
-.text           0x08000000     0x8869
+.text           0x08000000     0x8871
  *(.isr_vector)
  .isr_vector    0x08000000      0x1ac ..\obj\startup_stm32f429_439xx.o
                 0x08000000                g_pfnVectors
@@ -2921,60 +2921,60 @@ Linker script and memory map
  *(.rodata*)
  .rodata        0x08007344      0x7a6 ..\obj\trcKernel.o
  *fill*         0x08007aea        0x2 
- .rodata        0x08007aec       0x78 ..\obj\main.o
- .rodata        0x08007b64      0x617 ..\obj\trcBase.o
- *fill*         0x0800817b        0x1 
- .rodata        0x0800817c        0xd ..\obj\timers.o
- *fill*         0x08008189        0x3 
- .rodata        0x0800818c        0x5 ..\obj\tasks.o
- *fill*         0x08008191        0x3 
- .rodata        0x08008194       0x1f ..\obj\TD_robot.o
- *fill*         0x080081b3        0x1 
- .rodata        0x080081b4      0x3b1 ..\obj\trcUser.o
- *fill*         0x08008565        0x3 
- .rodata        0x08008568      0x298 ..\obj\trcKernelPort.o
- .rodata        0x08008800       0x47 ..\obj\trcHardwarePort.o
- *fill*         0x08008847        0x1 
- .rodata        0x08008848       0x21 ..\obj\stm32f429i_discovery.o
-                0x08008848                GPIO_PIN
-                0x0800884c                GPIO_CLK
-                0x08008854                BUTTON_PIN
-                0x08008858                BUTTON_CLK
-                0x0800885c                BUTTON_EXTI_LINE
-                0x08008860                BUTTON_PORT_SOURCE
-                0x08008864                BUTTON_PIN_SOURCE
-                0x08008868                BUTTON_IRQn
+ .rodata        0x08007aec       0x7c ..\obj\main.o
+ .rodata        0x08007b68      0x617 ..\obj\trcBase.o
+ *fill*         0x0800817f        0x1 
+ .rodata        0x08008180        0xd ..\obj\timers.o
+ *fill*         0x0800818d        0x3 
+ .rodata        0x08008190        0x5 ..\obj\tasks.o
+ *fill*         0x08008195        0x3 
+ .rodata        0x08008198       0x23 ..\obj\TD_robot.o
+ *fill*         0x080081bb        0x1 
+ .rodata        0x080081bc      0x3b1 ..\obj\trcUser.o
+ *fill*         0x0800856d        0x3 
+ .rodata        0x08008570      0x298 ..\obj\trcKernelPort.o
+ .rodata        0x08008808       0x47 ..\obj\trcHardwarePort.o
+ *fill*         0x0800884f        0x1 
+ .rodata        0x08008850       0x21 ..\obj\stm32f429i_discovery.o
+                0x08008850                GPIO_PIN
+                0x08008854                GPIO_CLK
+                0x0800885c                BUTTON_PIN
+                0x08008860                BUTTON_CLK
+                0x08008864                BUTTON_EXTI_LINE
+                0x08008868                BUTTON_PORT_SOURCE
+                0x0800886c                BUTTON_PIN_SOURCE
+                0x08008870                BUTTON_IRQn
  *(.eh_fram e*)
 
-.glue_7         0x0800886c        0x0
- .glue_7        0x0800886c        0x0 linker stubs
+.glue_7         0x08008874        0x0
+ .glue_7        0x08008874        0x0 linker stubs
 
-.glue_7t        0x0800886c        0x0
- .glue_7t       0x0800886c        0x0 linker stubs
+.glue_7t        0x08008874        0x0
+ .glue_7t       0x08008874        0x0 linker stubs
 
-.vfp11_veneer   0x0800886c        0x0
- .vfp11_veneer  0x0800886c        0x0 linker stubs
+.vfp11_veneer   0x08008874        0x0
+ .vfp11_veneer  0x08008874        0x0 linker stubs
 
-.v4_bx          0x0800886c        0x0
- .v4_bx         0x0800886c        0x0 linker stubs
+.v4_bx          0x08008874        0x0
+ .v4_bx         0x08008874        0x0 linker stubs
 
-.iplt           0x0800886c        0x0
- .iplt          0x0800886c        0x0 ..\obj\stm32f4xx_syscfg.o
+.iplt           0x08008874        0x0
+ .iplt          0x08008874        0x0 ..\obj\stm32f4xx_syscfg.o
 
-.rel.dyn        0x0800886c        0x0
- .rel.iplt      0x0800886c        0x0 ..\obj\stm32f4xx_syscfg.o
+.rel.dyn        0x08008874        0x0
+ .rel.iplt      0x08008874        0x0 ..\obj\stm32f4xx_syscfg.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800886c                __exidx_start = .
+                0x08008874                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0800886c                __exidx_end = .
-                0x0800886c                __etext = .
-                0x08008869                _sidata = __etext
+                0x08008874                __exidx_end = .
+                0x08008874                __etext = .
+                0x08008871                _sidata = __etext
 
-.data           0x20000000       0x44 load address 0x08008869
+.data           0x20000000       0x44 load address 0x08008871
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -3012,10 +3012,10 @@ Linker script and memory map
                 0x20000044                __data_end__ = .
                 0x20000044                _edata = __data_end__
 
-.igot.plt       0x20000044        0x0 load address 0x080088b0
+.igot.plt       0x20000044        0x0 load address 0x080088b8
  .igot.plt      0x20000044        0x0 ..\obj\stm32f4xx_syscfg.o
 
-.bss            0x20000044    0x17584 load address 0x080088b0
+.bss            0x20000044    0x17584 load address 0x080088b8
                 0x20000044                . = ALIGN (0x4)
                 0x20000044                __bss_start__ = .
                 0x20000044                _sbss = __bss_start__
@@ -3156,34 +3156,34 @@ LOAD c:/program files (x86)/gnu tools arm embedded/5.2 2015q4/bin/../lib/gcc/arm
 END GROUP
 OUTPUT(ITSPLC_FreeRTOS.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xe4c3
+.debug_info     0x00000000     0xe58f
  .debug_info    0x00000000      0x298 ..\obj\stm32f4xx_syscfg.o
  .debug_info    0x00000298     0x10bf ..\obj\trcKernel.o
  .debug_info    0x00001357      0xc46 ..\obj\stm32f429i_discovery_ioe.o
- .debug_info    0x00001f9d      0x4eb ..\obj\TD_acquisition.o
- .debug_info    0x00002488      0x4f0 ..\obj\TD_tapisEntree.o
- .debug_info    0x00002978      0x431 ..\obj\main.o
- .debug_info    0x00002da9      0xb4b ..\obj\trcBase.o
- .debug_info    0x000038f4      0xe1d ..\obj\stm32f4xx_rcc.o
- .debug_info    0x00004711      0xa45 ..\obj\timers.o
- .debug_info    0x00005156      0x434 ..\obj\TD_ecriture.o
- .debug_info    0x0000558a     0x1d97 ..\obj\tasks.o
- .debug_info    0x00007321      0x61d ..\obj\stm32f4xx_gpio.o
- .debug_info    0x0000793e      0x2d6 ..\obj\list.o
- .debug_info    0x00007c14      0x5bd ..\obj\system_stm32f4xx.o
- .debug_info    0x000081d1      0x61c ..\obj\TD_robot.o
- .debug_info    0x000087ed      0xfe0 ..\obj\trcUser.o
- .debug_info    0x000097cd      0x569 ..\obj\port.o
- .debug_info    0x00009d36     0x139d ..\obj\queue.o
- .debug_info    0x0000b0d3      0x72d ..\obj\trcKernelPort.o
- .debug_info    0x0000b800      0x45e ..\obj\TD_tapisSortie.o
- .debug_info    0x0000bc5e       0xee ..\obj\startup_stm32f429_439xx.o
- .debug_info    0x0000bd4c      0xb93 ..\obj\stm32f4xx_i2c.o
- .debug_info    0x0000c8df      0x348 ..\obj\stm32f4xx_exti.o
- .debug_info    0x0000cc27      0x5ce ..\obj\trcHardwarePort.o
- .debug_info    0x0000d1f5      0x541 ..\obj\misc.o
- .debug_info    0x0000d736      0x1ed ..\obj\heap_1.o
- .debug_info    0x0000d923      0xba0 ..\obj\stm32f429i_discovery.o
+ .debug_info    0x00001f9d      0x50d ..\obj\TD_acquisition.o
+ .debug_info    0x000024aa      0x512 ..\obj\TD_tapisEntree.o
+ .debug_info    0x000029bc      0x453 ..\obj\main.o
+ .debug_info    0x00002e0f      0xb4b ..\obj\trcBase.o
+ .debug_info    0x0000395a      0xe1d ..\obj\stm32f4xx_rcc.o
+ .debug_info    0x00004777      0xa45 ..\obj\timers.o
+ .debug_info    0x000051bc      0x456 ..\obj\TD_ecriture.o
+ .debug_info    0x00005612     0x1d97 ..\obj\tasks.o
+ .debug_info    0x000073a9      0x61d ..\obj\stm32f4xx_gpio.o
+ .debug_info    0x000079c6      0x2d6 ..\obj\list.o
+ .debug_info    0x00007c9c      0x5bd ..\obj\system_stm32f4xx.o
+ .debug_info    0x00008259      0x63e ..\obj\TD_robot.o
+ .debug_info    0x00008897      0xfe0 ..\obj\trcUser.o
+ .debug_info    0x00009877      0x569 ..\obj\port.o
+ .debug_info    0x00009de0     0x139d ..\obj\queue.o
+ .debug_info    0x0000b17d      0x72d ..\obj\trcKernelPort.o
+ .debug_info    0x0000b8aa      0x480 ..\obj\TD_tapisSortie.o
+ .debug_info    0x0000bd2a       0xee ..\obj\startup_stm32f429_439xx.o
+ .debug_info    0x0000be18      0xb93 ..\obj\stm32f4xx_i2c.o
+ .debug_info    0x0000c9ab      0x348 ..\obj\stm32f4xx_exti.o
+ .debug_info    0x0000ccf3      0x5ce ..\obj\trcHardwarePort.o
+ .debug_info    0x0000d2c1      0x541 ..\obj\misc.o
+ .debug_info    0x0000d802      0x1ed ..\obj\heap_1.o
+ .debug_info    0x0000d9ef      0xba0 ..\obj\stm32f429i_discovery.o
 
 .debug_abbrev   0x00000000     0x2a42
  .debug_abbrev  0x00000000      0x133 ..\obj\stm32f4xx_syscfg.o
@@ -3328,58 +3328,58 @@ OUTPUT(ITSPLC_FreeRTOS.elf elf32-littlearm)
  .debug_line    0x00007924      0x2f4 ..\obj\heap_1.o
  .debug_line    0x00007c18      0x400 ..\obj\stm32f429i_discovery.o
 
-.debug_str      0x00000000     0x56f6
+.debug_str      0x00000000     0x5718
  .debug_str     0x00000000      0x2ed ..\obj\stm32f4xx_syscfg.o
                                 0x34b (size before relaxing)
  .debug_str     0x000002ed      0x87e ..\obj\trcKernel.o
                                 0xa50 (size before relaxing)
  .debug_str     0x00000b6b      0x70f ..\obj\stm32f429i_discovery_ioe.o
                                 0x8f0 (size before relaxing)
- .debug_str     0x0000127a      0x401 ..\obj\TD_acquisition.o
-                                0x611 (size before relaxing)
- .debug_str     0x0000167b       0xf8 ..\obj\TD_tapisEntree.o
-                                0x61c (size before relaxing)
- .debug_str     0x00001773       0xbc ..\obj\main.o
-                                0x5a6 (size before relaxing)
- .debug_str     0x0000182f      0x32e ..\obj\trcBase.o
+ .debug_str     0x0000127a      0x423 ..\obj\TD_acquisition.o
+                                0x633 (size before relaxing)
+ .debug_str     0x0000169d       0xf8 ..\obj\TD_tapisEntree.o
+                                0x63e (size before relaxing)
+ .debug_str     0x00001795       0xbc ..\obj\main.o
+                                0x5c8 (size before relaxing)
+ .debug_str     0x00001851      0x32e ..\obj\trcBase.o
                                 0x9a7 (size before relaxing)
- .debug_str     0x00001b5d      0x79d ..\obj\stm32f4xx_rcc.o
+ .debug_str     0x00001b7f      0x79d ..\obj\stm32f4xx_rcc.o
                                 0x9da (size before relaxing)
- .debug_str     0x000022fa      0x517 ..\obj\timers.o
+ .debug_str     0x0000231c      0x517 ..\obj\timers.o
                                 0x7ae (size before relaxing)
- .debug_str     0x00002811       0xb3 ..\obj\TD_ecriture.o
-                                0x5da (size before relaxing)
- .debug_str     0x000028c4      0xc30 ..\obj\tasks.o
+ .debug_str     0x00002833       0xb3 ..\obj\TD_ecriture.o
+                                0x5fc (size before relaxing)
+ .debug_str     0x000028e6      0xc30 ..\obj\tasks.o
                                 0xfc9 (size before relaxing)
- .debug_str     0x000034f4      0x1b7 ..\obj\stm32f4xx_gpio.o
+ .debug_str     0x00003516      0x1b7 ..\obj\stm32f4xx_gpio.o
                                 0x4dd (size before relaxing)
- .debug_str     0x000036ab       0xde ..\obj\list.o
+ .debug_str     0x000036cd       0xde ..\obj\list.o
                                 0x361 (size before relaxing)
- .debug_str     0x00003789      0x138 ..\obj\system_stm32f4xx.o
+ .debug_str     0x000037ab      0x138 ..\obj\system_stm32f4xx.o
                                 0x400 (size before relaxing)
- .debug_str     0x000038c1      0x10e ..\obj\TD_robot.o
-                                0x67b (size before relaxing)
- .debug_str     0x000039cf      0x378 ..\obj\trcUser.o
+ .debug_str     0x000038e3      0x10e ..\obj\TD_robot.o
+                                0x69d (size before relaxing)
+ .debug_str     0x000039f1      0x378 ..\obj\trcUser.o
                                 0xa78 (size before relaxing)
- .debug_str     0x00003d47      0x227 ..\obj\port.o
+ .debug_str     0x00003d69      0x227 ..\obj\port.o
                                 0x4d4 (size before relaxing)
- .debug_str     0x00003f6e      0x4b2 ..\obj\queue.o
+ .debug_str     0x00003f90      0x4b2 ..\obj\queue.o
                                 0x8e8 (size before relaxing)
- .debug_str     0x00004420      0x1a8 ..\obj\trcKernelPort.o
+ .debug_str     0x00004442      0x1a8 ..\obj\trcKernelPort.o
                                 0x851 (size before relaxing)
- .debug_str     0x000045c8       0x9b ..\obj\TD_tapisSortie.o
-                                0x5d1 (size before relaxing)
- .debug_str     0x00004663      0x3a5 ..\obj\stm32f4xx_i2c.o
+ .debug_str     0x000045ea       0x9b ..\obj\TD_tapisSortie.o
+                                0x5f3 (size before relaxing)
+ .debug_str     0x00004685      0x3a5 ..\obj\stm32f4xx_i2c.o
                                 0x6ef (size before relaxing)
- .debug_str     0x00004a08      0x1e7 ..\obj\stm32f4xx_exti.o
+ .debug_str     0x00004a2a      0x1e7 ..\obj\stm32f4xx_exti.o
                                 0x389 (size before relaxing)
- .debug_str     0x00004bef       0xe8 ..\obj\trcHardwarePort.o
+ .debug_str     0x00004c11       0xe8 ..\obj\trcHardwarePort.o
                                 0x6f2 (size before relaxing)
- .debug_str     0x00004cd7      0x1e5 ..\obj\misc.o
+ .debug_str     0x00004cf9      0x1e5 ..\obj\misc.o
                                 0x40b (size before relaxing)
- .debug_str     0x00004ebc       0xd6 ..\obj\heap_1.o
+ .debug_str     0x00004ede       0xd6 ..\obj\heap_1.o
                                 0x2e8 (size before relaxing)
- .debug_str     0x00004f92      0x764 ..\obj\stm32f429i_discovery.o
+ .debug_str     0x00004fb4      0x764 ..\obj\stm32f429i_discovery.o
                                 0xdd5 (size before relaxing)
 
 .comment        0x00000000       0x6e
