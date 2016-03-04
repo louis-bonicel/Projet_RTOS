@@ -90,9 +90,9 @@
     <File name="trcConfig.h" path="trcConfig.h" type="1"/>
     <File name="main.h" path="main.h" type="1"/>
     <File name="FreeRTOS/portable/MemMang" path="" type="2"/>
-    <File name="stdperiph_lib/inc/stm32f4xx_dma2d.h" path="stdperiph_lib/inc/stm32f4xx_dma2d.h" type="1"/>
     <File name="stdperiph_lib/src/misc.c" path="stdperiph_lib/src/misc.c" type="1"/>
     <File name="stdperiph_lib/inc/stm32f4xx_exti.h" path="stdperiph_lib/inc/stm32f4xx_exti.h" type="1"/>
+    <File name="stdperiph_lib/inc/stm32f4xx_dma2d.h" path="stdperiph_lib/inc/stm32f4xx_dma2d.h" type="1"/>
     <File name="stdperiph_lib/src/stm32f4xx_rng.c" path="stdperiph_lib/src/stm32f4xx_rng.c" type="1"/>
     <File name="FreeRTOS/list.c" path="freertos/list.c" type="1"/>
     <File name="BSP" path="" type="2"/>
@@ -207,9 +207,9 @@
     <File name="FreeRTOS/croutine.c" path="freertos/croutine.c" type="1"/>
     <File name="stdperiph_lib/inc/stm32f4xx_tim.h" path="stdperiph_lib/inc/stm32f4xx_tim.h" type="1"/>
     <File name="FreeRTOS-Plus-Trace/trcHardwarePort.c" path="FreeRTOS-Plus-Trace/trcHardwarePort.c" type="1"/>
-    <File name="stdperiph_lib/inc/stm32f4xx_ltdc.h" path="stdperiph_lib/inc/stm32f4xx_ltdc.h" type="1"/>
     <File name="stdperiph_lib/src/stm32f4xx_cryp_des.c" path="stdperiph_lib/src/stm32f4xx_cryp_des.c" type="1"/>
     <File name="FreeRTOS-Plus-Trace/Include/trcKernel.h" path="FreeRTOS-Plus-Trace/Include/trcKernel.h" type="1"/>
+    <File name="stdperiph_lib/inc/stm32f4xx_ltdc.h" path="stdperiph_lib/inc/stm32f4xx_ltdc.h" type="1"/>
     <File name="FreeRTOS-Plus-Trace/Include/trcKernelPort.h" path="FreeRTOS-Plus-Trace/Include/trcKernelPort.h" type="1"/>
     <File name="FreeRTOSConfig.h" path="FreeRTOSConfig.h" type="1"/>
     <File name="FreeRTOS" path="" type="2"/>
