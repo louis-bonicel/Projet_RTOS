@@ -2,9 +2,11 @@
 
 // Include main headers
 #include "stm32f4xx.h"
+#include "fonts.h"
 
 // Include BSP headers
 #include "stm32f429i_discovery.h"
+#include "stm32f429i_discovery_lcd.h"
 #include "stm32f429i_discovery_sdram.h"
 #include "stm32f429i_discovery_ioe.h"
 
@@ -71,7 +73,7 @@ static const uint8_t SENSOR_ROBOT_PIECE_PRISE = 8;
 #define SENSOR_TYPE_S1 1
 #define SENSOR_BOUT_TAPIS_ENTREE 2
 #define SENSOR_PALETTE 3
-#define SENSOR_ROBOT_Y0 4
+#define SENSOR_ROBOT_X0 4
 #define SENSOR_DEPLACEMENT_ROBOT 5
 #define SENSOR_ROBOT_HAUT 6
 #define SENSOR_ROBOT_BAS 7

@@ -24,9 +24,10 @@ void vTaskAcquisitionCapteur( void *pvParameters )
   while( 1 )
   {
 	STM_EVAL_LEDOn( LED4 );
+
     while ( xQueueReceive( q_newSubscriptions , ( void * const )&bufferSubscriptions , 0 ) != errQUEUE_EMPTY )
     {
-      sensorsToCheck |= 0x0001 << bufferSubscriptions.sensor;
+       sensorsToCheck |= 0x0001 << bufferSubscriptions.sensor;
 
       if ( bufferSubscriptions.value == 1u )
         sensorsValuesToCheck |= 1u << bufferSubscriptions.sensor;
@@ -35,6 +36,10 @@ void vTaskAcquisitionCapteur( void *pvParameters )
 
       t_QueueTable[ bufferSubscriptions.sensor ] = bufferSubscriptions.queue;
     }
+
+	char label[ 10 ];
+	sprintf( label , "%04X %04X" , sensorsToCheck , sensorsValuesToCheck );
+	LCD_DisplayStringLine( 36 , (uint8_t*) label );
 
     xSemaphoreTake( sem_I2C_BUS , portMAX_DELAY );
     ReadSensors( &sensors );
@@ -61,7 +66,7 @@ void vTaskAcquisitionCapteur( void *pvParameters )
       }
     }
 
-    STM_EVAL_LEDOff( LED4 );
+	STM_EVAL_LEDOff( LED4 );
     vTaskDelayUntil( &xLastWakeTime , SENSORS_UPDATE_PERIOD / portTICK_RATE_MS );
   }
 }

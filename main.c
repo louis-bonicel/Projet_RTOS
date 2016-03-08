@@ -50,6 +50,15 @@ int main( void )
     STM_EVAL_LEDInit(LED4);
     STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);
 
+    // Init LCD
+
+	LCD_Init();
+	LCD_LayerInit();
+	LTDC_Cmd(ENABLE);
+	LCD_SetLayer(LCD_FOREGROUND_LAYER);
+	LCD_Clear(0xFFFF);
+	LCD_SetTextColor(0x0000);
+	LCD_SetFont(&Font12x12);
     // Start IO Extenders (Touchpad & PCF IO Extenders)
 
     IOE_Config();
@@ -124,13 +133,15 @@ int main( void )
 
     xTaskCreate( vTaskAcquisitionCapteur , "Task_Capteurs" , 128 , NULL , TASK_SENSORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
     xTaskCreate( vTaskEcritureActionneur , "Task_Actionneurs" , 128 , NULL , TASK_ACTUATORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
-    // xTaskCreate( vTaskTapisSortie , "Task_TapisSortie" , 128 , NULL , TASK_TAPIS_SORTIE_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    xTaskCreate( vTaskTapisSortie , "Task_TapisSortie" , 128 , NULL , TASK_TAPIS_SORTIE_PRIORITY , NULL );        // 128 bytes stack, priority 1
     xTaskCreate( vTaskTapisEntree , "Task_TapisEntree" , 128 , NULL , TASK_TAPIS_ENTREE_PRIORITY , NULL );        // 128 bytes stack, priority 1
-    // xTaskCreate( vTaskRobot , "Task_Robot" , 128 , NULL , TASK_ROBOT_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    xTaskCreate( vTaskRobot , "Task_Robot" , 128 , NULL , TASK_ROBOT_PRIORITY , NULL );        // 128 bytes stack, priority 1
 
     user_event_channel = xTraceOpenLabel("UEV");
 
     // Start the Scheduler
+
+	LCD_DisplayStringLine(12, (uint8_t*) "Init done");
 
     vTaskStartScheduler();
 
