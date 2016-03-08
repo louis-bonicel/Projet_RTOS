@@ -16,6 +16,7 @@ void vTaskTapisEntree( void *pvParameters )
 
   while( 1 )
   {
+	STM_EVAL_LEDOn( LED3 );
       uint8_t type;
       for ( type = 0 ; type < 3 ; type++ )
         t_cpt_type_manquante[ type ] = 3;
@@ -35,10 +36,11 @@ void vTaskTapisEntree( void *pvParameters )
 
           sensorType0.value = 0;
           sensorType1.value = 0;
+
           xQueueReceive( q_sensorsTapisEntree , &sensorType0 , portMAX_DELAY );
           xQueueReceive( q_sensorsTapisEntree , &sensorType1 , 0 );
 
-          typePiece = sensorType0.value | ( sensorType1.value << 1 );
+          typePiece = (sensorType0.value | ( sensorType1.value << 1 )) - 1; // a changer
 
           if( t_cpt_type_manquante[ typePiece ] != 0)
           {
@@ -50,10 +52,14 @@ void vTaskTapisEntree( void *pvParameters )
               xQueueSendToFront( q_newSubscriptions , ( void * const )&sensorToSubscribe , portMAX_DELAY );
               xQueueReceive( q_sensorsTapisEntree , ( void * const )NULL , portMAX_DELAY );
 
+            STM_EVAL_LEDOff( LED3 );
+              //STM_EVAL_LEDToggle( LED3 );
+
               DeplacerTapisEntree( 0 );
 
               xQueueSendToFront( q_pieceDispo , ( void * const )&typePiece , portMAX_DELAY );
-              xQueueReceive( q_piecePrise , ( void * const )NULL , portMAX_DELAY );
+              // xQueueReceive( q_piecePrise , ( void * const )NULL , portMAX_DELAY );
+              xQueueReceive( q_piecePrise , ( void * const )NULL , 0 );
 
               cpt_pieces_prises++;
           }

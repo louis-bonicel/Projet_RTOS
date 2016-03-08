@@ -1,22 +1,22 @@
 #pragma once
 
-static const uint8_t TASK_TAPIS_ENTREE_PRIORITY = 10;
-static const uint8_t TASK_ROBOT_PRIORITY = 20;
-static const uint8_t TASK_TAPIS_SORTIE_PRIORITY = 30;
-static const uint8_t TASK_SENSORS_PRIORITY = 40;
-static const uint8_t TASK_ACTUATORS_PRIORITY = 50;
+#define TASK_TAPIS_ENTREE_PRIORITY 1
+#define TASK_ROBOT_PRIORITY 2
+#define TASK_TAPIS_SORTIE_PRIORITY 3
+#define TASK_SENSORS_PRIORITY 4
+#define TASK_ACTUATORS_PRIORITY 5
 
 static const uint8_t SENSORS_QUEUE_LENGTH = 5;
 static const uint8_t ACTUATORS_QUEUE_LENGTH = 5;
 
-static const uint16_t SENSORS_UPDATE_PERIOD = 250; // millis
+static const uint16_t SENSORS_UPDATE_PERIOD = 50; // millis
 static const uint16_t ACTUATORS_UPDATE_PERIOD = 100; // millis
 
 void vTaskAcquisitionCapteur( void *pvParameters );
 void ReadSensors( uint16_t * sensors );
 
 void vTaskEcritureActionneur( void *pvParameters );
-void WriteActuators( uint16_t * actuators );
+void WriteActuators( uint8_t * actuators );
 
 void vTaskTapisSortie( void *pvParameters );
 void DeplacerTapisSortie( uint8_t etat );

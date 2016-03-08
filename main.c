@@ -78,7 +78,7 @@ int main( void )
     // Launch FreeRTOS Trace recording
     vTraceInitTraceData();
     uiTraceStart();
-/*
+
     // Initialize resources management variable
     q_newSubscriptions = xQueueCreate( SENSORS_QUEUE_LENGTH , sizeof( subscription_t ) );
     if ( q_newSubscriptions == NULL )
@@ -119,23 +119,14 @@ int main( void )
     sem_I2C_BUS = xSemaphoreCreateMutex();
     if ( sem_I2C_BUS == NULL )
       return 1;
-*/
-    // Create Tasks
-/*
- *
-     xTaskCreate( vTaskAcquisitionCapteur , "Task_Capteurs" , 128 , NULL , TASK_SENSORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
-    xTaskCreate( vTaskEcritureActionneur , "Task_Actionneurs" , 128 , NULL , TASK_ACTUATORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
-    xTaskCreate( vTaskTapisSortie , "Task_TapisSortie" , 128 , NULL , TASK_TAPIS_SORTIE_PRIORITY , NULL );        // 128 bytes stack, priority 1
-    xTaskCreate( vTaskTapisEntree , "Task_TapisEntree" , 128 , NULL , TASK_TAPIS_ENTREE_PRIORITY , NULL );        // 128 bytes stack, priority 1
-    xTaskCreate( vTaskRobot , "Task_Robot" , 128 , NULL , TASK_ROBOT_PRIORITY , NULL );        // 128 bytes stack, priority 1
 
-*/
-    while (1)
-    {
-        uint8_t sensors = I2C_ReadPCFRegister( PCF_A_READ_ADDR );
-        I2C_WritePCFRegister( PCF_C_WRITE_ADDR , sensors );
-        vTaskDelay(100);
-    }
+    // Create Tasks
+
+    xTaskCreate( vTaskAcquisitionCapteur , "Task_Capteurs" , 128 , NULL , TASK_SENSORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    xTaskCreate( vTaskEcritureActionneur , "Task_Actionneurs" , 128 , NULL , TASK_ACTUATORS_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    // xTaskCreate( vTaskTapisSortie , "Task_TapisSortie" , 128 , NULL , TASK_TAPIS_SORTIE_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    xTaskCreate( vTaskTapisEntree , "Task_TapisEntree" , 128 , NULL , TASK_TAPIS_ENTREE_PRIORITY , NULL );        // 128 bytes stack, priority 1
+    // xTaskCreate( vTaskRobot , "Task_Robot" , 128 , NULL , TASK_ROBOT_PRIORITY , NULL );        // 128 bytes stack, priority 1
 
     user_event_channel = xTraceOpenLabel("UEV");
 
